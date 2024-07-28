@@ -1,0 +1,12 @@
+name: Node Install
+on: workflow_dispatch
+jobs:
+    Install-Node:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get Code
+              uses: actions/checkout@v4
+            - name: Install Node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
